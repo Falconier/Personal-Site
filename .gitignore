@@ -1,0 +1,7 @@
+# Ignore specific files
+
+# Ignore all files with a specific extension
+*.log
+*.env
+
+# Ignore an entire directory
