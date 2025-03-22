@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const typingText = document.getElementById("typing-text");
-    const sourceText = document.getElementById("sourceText").textContent;
+    const sourceTexts = [
+        document.getElementById("sourceText1").textContent,
+        document.getElementById("sourceText2").textContent,
+        document.getElementById("sourceText3").textContent,
+        document.getElementById("sourceText4").textContent,
+        document.getElementById("sourceText5").textContent
+    ];
+    let currentTextIndex = 0;
     let index = 0;
     let isDeleting = false;
 
     function type() {
+        const sourceText = sourceTexts[currentTextIndex];
         if (!isDeleting && index < sourceText.length) {
             // Typing forward
             typingText.textContent = sourceText.substring(0, index + 1);
@@ -22,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (isDeleting && index === 0) {
             // Reset and start over
             isDeleting = false;
+            currentTextIndex = (currentTextIndex + 1) % sourceTexts.length; // Cycle through texts
             setTimeout(type, 500); // 0.5-second pause before restarting
         }
     }
