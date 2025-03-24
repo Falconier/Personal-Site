@@ -10,7 +10,27 @@
 
 <body>
     <header>
-        <h1>Welcome to My Site</h1>
+        <h1 class="letterhead">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters letters-left">Jacob</span>
+                <!-- <span class="letters letters-ampersand">&amp</span> -->
+                <span class="letters letters-middle">Emory</span>
+                <span class="letters letters-right">Bullin</span>
+                <span class="line line2"></span>
+            </span>
+        </h1>
+        <section class="letterhead-subtitle">
+            <span class="text-wrapper">
+                <!-- <span class="line line1"></span> -->
+                <span class="letters letters-left">336-414-2454</span>
+                <span class="letters pipe"> | </span>
+                <span class="letters letters-middle">jbullin.engstudio@icloud.com</span>
+                <span class="letters pipe"> | </span>
+                <span class="letters letters-right">Rural Hall, NC</span>
+                <!-- <span class="line line2"></span> -->
+            </span>
+        </section>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -26,7 +46,7 @@
             <span id="sourceText1" style="display: none;">Charging Ahead with Innovation!</span>
             <span id="sourceText2" style="display: none;">Empowering Ideas Through Technology!</span>
             <span id="sourceText3" style="display: none;">Proxmox Pro!</span>
-            <span id="sourceText4" style="display: none;">Custom IT/AV Solutions!</span>
+            <span id="sourceText4" style="display: none;">AI is just a bunch of IF statements!</span>
             <span id="sourceText5" style="display: none;">Transforming Visions into Reality!</span>
             <h2><span id="typing-text"></span><span class="cursor"></span></h2>
             <p>This is my personal website. Stay tuned for more cool stuff!</p>
@@ -39,6 +59,9 @@
     </footer>
 
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/anime.min.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
 </body>
 
 </html>
