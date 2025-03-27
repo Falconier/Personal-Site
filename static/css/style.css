@@ -26,6 +26,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    padding-inline-start: 0px;
 }
 
 nav a {
@@ -93,6 +94,12 @@ footer {
     transform-origin: 0.5 0;
 }
 
+@media (max-width: 840px) {
+    .letterhead .line { 
+        display: none;
+    }
+}
+
 .letterhead .ampersand {
     /* font-family: Arial, sans-serif; */
     font-style: italic;
@@ -134,6 +141,13 @@ footer {
     width: 100%;
     background-color: #ffffff;
     transform-origin: 0.5 0;
+}
+
+@media (max-width: 740px) {
+    .letterhead-subtitle .pipe { 
+        display: none;
+        visibility: hidden;
+    }
 }
 
 .letterhead-subtitle .pipe {
