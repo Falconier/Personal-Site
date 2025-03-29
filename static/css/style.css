@@ -3,6 +3,7 @@ body {
     /* font-family: Copperplate,Copperplate Gothic Light,fantasy; */
     line-height: 1.6;
     color: #333;
+    overflow-x: hidden;
 }
 
 header {
