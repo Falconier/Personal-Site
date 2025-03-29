@@ -33,7 +33,7 @@ build_image() {
     echo "Building Docker image..."
     docker build -t $IMAGE_NAME $DOCKERFILE_PATH
     if [ $? -ne 0 ]; then
-        echo "Failed to build Docker image."
+        echo "Failed to build Docker image. Are you in the right directory with a valid Dockerfile?"
         exit 1
     fi
     echo "Image built successfully"

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website - Projects</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <header>
         <h1 class="letterhead">
@@ -36,14 +38,18 @@
     </header>
 
     <main>
-        <section class="projects">
+        <section id="projects" class="projects">
             <h2>Current Projects</h2>
             <div class="project-list">
                 <div class="project-card">
                     <h3>Portfolio Website</h3>
                     <p>A personal site to showcase my work and skills, built with Python, Flask, and Docker.</p>
-                    <p><strong>Status:</strong> In Progress</p>
-                    <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+                    <button class="details-toggle">More Info</button>
+                    <div class="details" style="display: none;">
+                        <p><strong>Status:</strong> In Progress</p>
+                        <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+                        <p><strong>Details:</strong> Deployed with Docker, features animations.</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Member Manager</h3>
@@ -64,20 +70,20 @@
                 <div class="project-card">
                     <h3>Label Manager</h3>
                     <p>An application to streamline label creation and printing for inventory.</p>
-                    <p><strong>Status:</strong> Completed</p>
-                    <p><strong>Tech:</strong> Python, Tkinter</p>
+                    <p><strong>Status:</strong>Completed</p>
+                    <p><strong>Tech:</strong>C#, Visual Basic, Python</p>
                 </div>
                 <div class="project-card">
                     <h3>RAI OMS</h3>
                     <p>Order management system for RAI, improving workflow efficiency.</p>
-                    <p><strong>Status:</strong> Completed</p>
-                    <p><strong>Tech:</strong> JavaScript, Node.js, SQL</p>
+                    <p><strong>Status:</strong>Completed</p>
+                    <p><strong>Tech:</strong>Ignition, Jython, SQL</p>
                 </div>
                 <div class="project-card">
                     <h3>FLS Reporting and Analytics</h3>
                     <p>A reporting tool for analyzing logistics data with visualizations.</p>
                     <p><strong>Status:</strong> Completed</p>
-                    <p><strong>Tech:</strong> Python, Pandas, Tableau</p>
+                    <p><strong>Tech:</strong>Python, JavaScript, SQL</p>
                 </div>
             </div>
         </section>
@@ -91,4 +97,5 @@
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
     <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+
 </html>

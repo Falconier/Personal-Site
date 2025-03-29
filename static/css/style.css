@@ -43,6 +43,7 @@ main {
     padding: 2rem;
     min-height: 80vh;
     text-align: center;
+    scroll-behavior: smooth;;
 }
 
 footer {
@@ -178,6 +179,13 @@ ul {
     margin: 0 auto;
 }
 
+.projects h2 {
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    color: #475f4f;
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -222,6 +230,24 @@ ul {
     .project-card h3 {
         font-size: 1.3em;
     }
+}
+
+.details-toggle {
+    background: #475f4f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.details-toggle:hover {
+    background: #3498db;
+}
+
+.details {
+    margin-top: 1rem;
 }
 
 /* Blink animation */

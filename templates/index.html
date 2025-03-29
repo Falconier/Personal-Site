@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=.95">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -34,14 +34,14 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/projects">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <!-- <section>
             <span id="sourceText1" style="display: none;">Charging Ahead with Innovation!</span>
             <span id="sourceText2" style="display: none;">Empowering Ideas Through Technology!</span>
             <span id="sourceText3" style="display: none;">Proxmox Pro!</span>
@@ -50,7 +50,58 @@
             <h2><span id="typing-text"></span><span class="cursor"></span></h2>
             <p>This is my personal website. Stay tuned for more cool stuff!</p>
             </h2>
+        </section> -->
+        
+        <section id="projects" class="projects">
+            <h2>Current Projects</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal site to showcase my work and skills, built with Python, Flask, and Docker.</p>
+                    <button class="details-toggle">More Info</button>
+                    <div class="details" style="display: none;">
+                        <p><strong>Status:</strong> In Progress</p>
+                        <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+                        <p><strong>Details:</strong> Deployed with Docker, features animations.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Member Manager</h3>
+                    <p>A tool to manage team member data and schedules efficiently.</p>
+                    <p><strong>Status:</strong> In Progress</p>
+                    <p><strong>Tech:</strong> Python, SQL</p>
+                </div>
+                <div class="project-card">
+                    <h3>The Home Lab</h3>
+                    <p>A personal server setup for experimenting with virtualization and networking.</p>
+                    <p><strong>Status:</strong> Ongoing</p>
+                    <p><strong>Tech:</strong> Proxmox, Docker, Linux</p>
+                </div>
+            </div>
+
+            <h2>Past Projects and Work</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Label Manager</h3>
+                    <p>An application to streamline label creation and printing for inventory.</p>
+                    <p><strong>Status:</strong>Completed</p>
+                    <p><strong>Tech:</strong>C#, Visual Basic, Python</p>
+                </div>
+                <div class="project-card">
+                    <h3>RAI OMS</h3>
+                    <p>Order management system for RAI, improving workflow efficiency.</p>
+                    <p><strong>Status:</strong>Completed</p>
+                    <p><strong>Tech:</strong>Ignition, Jython, SQL</p>
+                </div>
+                <div class="project-card">
+                    <h3>FLS Reporting and Analytics</h3>
+                    <p>A reporting tool for analyzing logistics data with visualizations.</p>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Tech:</strong>Python, JavaScript, SQL</p>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer>
