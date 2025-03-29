@@ -64,7 +64,7 @@ redeploy() {
 
 status() {
     echo "Container Status:"
-    docker ps -a --filter "name=$CONTAINER_NAME" --format "table {{.Names}}\t{{.Status}}
+    docker ps -a --filter "name=$CONTAINER_NAME" --format "table {{.Names}}\t{{.Status}}"
 }
 
 case "$1" in
