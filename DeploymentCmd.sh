@@ -62,6 +62,11 @@ redeploy() {
     deploy_container
 }
 
+status() {
+    echo "Container Status:"
+    docker ps -a --filter "name=$CONTAINER_NAME" --format "table {{.Names}}\t{{.Status}}
+}
+
 case "$1" in
     redeploy)
         redeploy
@@ -77,12 +82,17 @@ case "$1" in
         check_docker
         deploy_container
         ;;
+    status)
+        check_docker
+        status
+        ;;
     *)
-        echo "Usage: $0 {redeploy|stop|build|deploy}"
+        echo "Usage: $0 {redeploy|stop|build|deploy|status}"
         echo "  redeploy  - Stop existing container, build a new image, and deploy"
         echo "  stop      - Stop the existing Docker container"
         echo "  build     - Build the Docker image"
         echo "  deploy    - Deploy the Docker container"
+        echo "  status    - Show the status of the Docker container"
         echo "Example: $0 redeploy"
         echo "This script must be run as root. Please use sudo."
         echo "Note: Ensure Docker is installed and running."
