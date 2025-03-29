@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>My Personal Website - Projects</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
     <header>
-        <h1>Welcome to My Site</h1>
+        <h1 class="letterhead">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters letters-left">Jacob</span>
+                <span class="letters letters-middle">Emory</span>
+                <span class="letters letters-right">Bullin</span>
+                <span class="line line2"></span>
+            </span>
+        </h1>
+        <section class="letterhead-subtitle">
+            <span class="text-wrapper">
+                <span class="letters letters-left">336-414-2454</span>
+                <span class="letters pipe"> | </span>
+                <span class="letters letters-middle">jbullin.engstudio@icloud.com</span>
+                <span class="letters pipe"> | </span>
+                <span class="letters letters-right">Rural Hall, NC</span>
+            </span>
+        </section>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -21,28 +36,59 @@
     </header>
 
     <main>
-        <section>
+        <section class="projects">
             <h2>Current Projects</h2>
-            <ul>
-                <li>Portfolio Website</li>
-                <li>Member Manager</li>
-                <li>The Home Lab</li>
-            </ul>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal site to showcase my work and skills, built with Python, Flask, and Docker.</p>
+                    <p><strong>Status:</strong> In Progress</p>
+                    <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+                </div>
+                <div class="project-card">
+                    <h3>Member Manager</h3>
+                    <p>A tool to manage team member data and schedules efficiently.</p>
+                    <p><strong>Status:</strong> In Progress</p>
+                    <p><strong>Tech:</strong> Python, SQL</p>
+                </div>
+                <div class="project-card">
+                    <h3>The Home Lab</h3>
+                    <p>A personal server setup for experimenting with virtualization and networking.</p>
+                    <p><strong>Status:</strong> Ongoing</p>
+                    <p><strong>Tech:</strong> Proxmox, Docker, Linux</p>
+                </div>
+            </div>
+
             <h2>Past Projects and Work</h2>
-            <ul>
-                <li>Label Manager</li>
-                <li>RAI OMS</li>
-                <li>FLS Reporting and Analytics</li>
-            </ul>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Label Manager</h3>
+                    <p>An application to streamline label creation and printing for inventory.</p>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Tech:</strong> Python, Tkinter</p>
+                </div>
+                <div class="project-card">
+                    <h3>RAI OMS</h3>
+                    <p>Order management system for RAI, improving workflow efficiency.</p>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Tech:</strong> JavaScript, Node.js, SQL</p>
+                </div>
+                <div class="project-card">
+                    <h3>FLS Reporting and Analytics</h3>
+                    <p>A reporting tool for analyzing logistics data with visualizations.</p>
+                    <p><strong>Status:</strong> Completed</p>
+                    <p><strong>Tech:</strong> Python, Pandas, Tableau</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Jacob Emory Bullin. All rights reserved.</p>
+        <p>© 2025 Jacob Emory Bullin. All rights reserved.</p>
     </footer>
 
+    <script src="{{ url_for('static', filename='js/anime.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-
 </html>

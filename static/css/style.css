@@ -171,6 +171,59 @@ ul {
     opacity: 0;
 }
 
+/* Add to your existing CSS */
+
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    color: #475f4f; /* Matches header background */
+}
+
+.project-card p {
+    margin: 0.5rem 0;
+    font-size: 1em;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .project-list {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.3em;
+    }
+}
+
 /* Blink animation */
 @keyframes blink {
 

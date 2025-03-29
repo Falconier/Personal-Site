@@ -38,3 +38,35 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start typing when the page loads
     type();
 });
+
+// static/js/animations.js
+document.addEventListener("DOMContentLoaded", () => {
+    // Header animation
+    // anime({
+    //     targets: ".letterhead .letters",
+    //     opacity: [0, 1],
+    //     translateY: [20, 0],
+    //     easing: "easeOutQuad",
+    //     duration: 800,
+    //     delay: anime.stagger(200)
+    // });
+
+    // anime({
+    //     targets: ".letterhead-subtitle .letters",
+    //     opacity: [0, 1],
+    //     translateY: [10, 0],
+    //     easing: "easeOutQuad",
+    //     duration: 600,
+    //     delay: anime.stagger(150, { start: 1000 })
+    // });
+
+    // Project cards animation
+    anime({
+        targets: ".project-card",
+        opacity: [0, 1],
+        translateY: [30, 0],
+        easing: "easeOutQuad",
+        duration: 600,
+        delay: anime.stagger(200, { start: 1500 }) // Start after header
+    });
+});
