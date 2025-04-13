@@ -19,6 +19,10 @@ def home():
 def projects():
     return render_template('projects.html')
 
+@app.route('/sandbox')
+def sandbox():
+    return render_template('sandbox.html')
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
