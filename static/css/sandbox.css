@@ -1,5 +1,5 @@
-.digital-clock
-{
+.digital-clock {
+    font-family: "Nixie One", system-ui;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -7,44 +7,54 @@
     user-select: none;
     padding: 0 2rem;
     border: .5rem solid #fff;
+    justify-content: center;
+    align-items: center;
 }
 
-.day-of-week
-{
+.day-of-week {
+    font-family: "Nixie One", system-ui;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-    width: 3rem;
+    align-items: center;
+    width: 4rem;
     color: #2d2d2d;
-    font-weight: bold;
-    font-family: "Hack";
     padding: 0 2rem;
 }
 
-.day-of-week .active 
-{
+.day-of-week .active {
     color: #fff
 }
 
-.time
-{
-    font-family: "FX_LED";
+.time {
+    font-family: "Nixie One", system-ui;
+    font-size: 10rem;
 }
 
-.hour, .minute, .separator, .second
-{
+.hour,
+.minute,
+.separator,
+.second {
     display: inline-block;
-    font-size: 13rem;
     color: #2d2d2d;
 }
 
-.min
-{
+.min {
     display: math;
 }
 
-.invisible
-{
+.invisible {
     visibility: hidden;
+}
+
+@media (max-width: 760px) {
+
+    .day-of-week {
+        font-size: 0.8rem;
+    }
+
+    .time, .hour, .minute, .separator, .second {
+        font-size: 5rem;
+    }
 }
