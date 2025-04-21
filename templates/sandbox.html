@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=.95">
     <title>Portfolio | JEB</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sandbox.css') }}">
 </head>
 
 <body>
@@ -42,7 +43,23 @@
     </header>
 
 <!-- some pop up modals based on the cards from the projects section on the index -->
-
+    <div class="digital-clock">
+        <div class="day-of-week">
+            <div class="active"></div>
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+        </div>
+        <div class="time">
+            <div class="hour">12</div>
+            <div class="separator">:</div>
+            <div class="minute">00</div>
+        </div>
+    </div>
 
 </body>
 
@@ -52,6 +69,7 @@
 
 <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
 <script src="{{ url_for('static', filename='js/anime.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sandbox.js') }}"></script>
 <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 

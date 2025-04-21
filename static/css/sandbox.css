@@ -1,0 +1,50 @@
+.digital-clock
+{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    border-radius: 2rem;
+    user-select: none;
+    padding: 0 2rem;
+    border: .5rem solid #fff;
+}
+
+.day-of-week
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 3rem;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: "Hack";
+    padding: 0 2rem;
+}
+
+.day-of-week .active 
+{
+    color: #fff
+}
+
+.time
+{
+    font-family: "FX_LED";
+}
+
+.hour, .minute, .separator, .second
+{
+    display: inline-block;
+    font-size: 13rem;
+    color: #2d2d2d;
+}
+
+.min
+{
+    display: math;
+}
+
+.invisible
+{
+    visibility: hidden;
+}
