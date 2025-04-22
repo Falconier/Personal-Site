@@ -5,7 +5,7 @@
     display: flex;
     border-radius: 2rem;
     user-select: none;
-    padding: 0 2rem;
+    padding: 1rem;
     border: .5rem solid #fff;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     align-items: center;
     width: 4rem;
     color: #2d2d2d;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .day-of-week .active {
@@ -30,6 +30,7 @@
 .time {
     font-family: "Nixie One", system-ui;
     font-size: 10rem;
+    display: flex;
 }
 
 .hour,
@@ -39,6 +40,8 @@
     display: inline-block;
     color: #2d2d2d;
 }
+
+.separator
 
 .min {
     display: math;
@@ -56,5 +59,15 @@
 
     .time, .hour, .minute, .separator, .second {
         font-size: 5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .day-of-week {
+        font-size: 0.6rem;
+    }
+
+    .time, .hour, .minute, .separator, .second {
+        font-size: 2rem;
     }
 }
