@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.95">
+    <title>Portfolio | JEB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="letterhead">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters letters-left">Jacob</span>
+                <!-- <span class="letters letters-ampersand">&amp</span> -->
+                <span class="letters letters-middle">Emory</span>
+                <span class="letters letters-right">Bullin</span>
+                <span class="line line2"></span>
+            </span>
+        </h1>
+        <section class="letterhead-subtitle">
+            <span class="text-wrapper">
+                <!-- <span class="line line1"></span> -->
+                <span class="letters letters-left">336-414-2454</span>
+                <span class="letters pipe"> | </span>
+                <span class="letters letters-middle">jbullin.engstudio@icloud.com</span>
+                <span class="letters pipe"> | </span>
+                <span class="letters letters-right">Rural Hall, NC</span>
+                <!-- <span class="line line2"></span> -->
+            </span>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/sandbox">Sandbox</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Main content will be injected here -->
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+        {% endblock %}
+    </footer>
+    <scripts>
+        {% block scripts %}
+        {% endblock %}
+    </scripts>
+    <!-- <footer>
+        <p>&copy; 2024 Jacob Emory Bullin. All rights reserved.</p>
+        <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+        <p>Designed and developed by Jacob Emory Bullin.</p>
+    </footer> -->

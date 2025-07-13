@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
-    </head>
+</head>
 
 <body>
     <header>
@@ -37,33 +37,36 @@
         </section>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/">Home</a></li>   
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/sandbox">Sandbox</a></li>
             </ul>
         </nav>
     </header>
 
-<!-- some pop up modals based on the cards from the projects section on the index -->
-    <div class="digital-clock">
-        <div class="day-of-week">
-            <div class="active"></div>
-            <div>Sunday</div>
-            <div>Monday</div>
-            <div>Tuesday</div>
-            <div>Wednesday</div>
-            <div>Thursday</div>
-            <div>Friday</div>
-            <div>Saturday</div>
-        </div>
-        <div class="time">
-            <div class="hour">12</div>
-            <div class="separator">:</div>
-            <div class="minute">00</div>
+    <button id="clockBtn">Open the Clock</button>
+    <div id="clockModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="digital-clock">
+                <div class="day-of-week">
+                    <div class="active"></div>
+                    <div>Sunday</div>
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                </div>
+                <div class="time">
+                    <div class="hour">12</div>
+                    <div class="separator">:</div>
+                    <div class="minute">00</div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 
 <footer>

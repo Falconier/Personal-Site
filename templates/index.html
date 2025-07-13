@@ -1,48 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.95">
-    <title>Portfolio | JEB</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-
-<body>
-    <header>
-        <h1 class="letterhead">
-            <span class="text-wrapper">
-                <span class="line line1"></span>
-                <span class="letters letters-left">Jacob</span>
-                <!-- <span class="letters letters-ampersand">&amp</span> -->
-                <span class="letters letters-middle">Emory</span>
-                <span class="letters letters-right">Bullin</span>
-                <span class="line line2"></span>
-            </span>
-        </h1>
-        <section class="letterhead-subtitle">
-            <span class="text-wrapper">
-                <!-- <span class="line line1"></span> -->
-                <span class="letters letters-left">336-414-2454</span>
-                <span class="letters pipe"> | </span>
-                <span class="letters letters-middle">jbullin.engstudio@icloud.com</span>
-                <span class="letters pipe"> | </span>
-                <span class="letters letters-right">Rural Hall, NC</span>
-                <!-- <span class="line line2"></span> -->
-            </span>
-        </section>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/sandbox">Sandbox</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- <section>
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <!-- <section>
             <span id="sourceText1" style="display: none;">Charging Ahead with Innovation!</span>
             <span id="sourceText2" style="display: none;">Empowering Ideas Through Technology!</span>
             <span id="sourceText3" style="display: none;">Proxmox Pro!</span>
@@ -53,113 +12,137 @@
             </h2>
         </section> -->
 
-        <section id="about">
-            <div class="about">
-                <h2>About Me</h2>
-                <p>Hello! I'm Jacob Emory Bullin, a passionate software developer and technology enthusiast based in
-                    Rural Hall, NC. With a strong background in programming and a knack for problem-solving, I thrive on
-                    creating innovative solutions that make a difference.</p>
-                <p>I specialize in full-stack development, with experience in various programming languages and
-                    frameworks. My journey in technology has been fueled by a desire to learn and adapt to new
-                    challenges, and I am always eager to take on projects that push the boundaries of what's possible.
-                </p>
-                <p>When I'm not coding, you can find me exploring the latest tech trends, tinkering with my home lab
-                    setup, or enjoying the great outdoors. I believe in the power of technology to transform lives and
-                    am committed to using my skills to contribute positively to the world around me.</p>
-                <p>If you're interested in collaborating or just want to chat about technology, feel free to reach out!
-                    I'm always open to connecting with fellow tech enthusiasts and exploring new opportunities.</p>
-                <p>Feel free to explore my projects below to see some of the work I've done and the technologies I enjoy
-                    working with. Thank you for visiting my personal website!</p>
-            </div>
-        </section>
+    <section id="about">
+        <div class="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Jacob Emory Bullin, a passionate software developer and technology enthusiast based in
+                Rural Hall, NC. With a strong background in programming and a knack for problem-solving, I thrive on
+                creating innovative solutions that make a difference.</p>
+            <p>I specialize in full-stack development, with experience in various programming languages and
+                frameworks. My journey in technology has been fueled by a desire to learn and adapt to new
+                challenges, and I am always eager to take on projects that push the boundaries of what's possible.
+            </p>
+            <p>When I'm not coding, you can find me exploring the latest tech trends, tinkering with my home lab
+                setup, or enjoying the great outdoors. I believe in the power of technology to transform lives and
+                am committed to using my skills to contribute positively to the world around me.</p>
+            <p>If you're interested in collaborating or just want to chat about technology, feel free to reach out!
+                I'm always open to connecting with fellow tech enthusiasts and exploring new opportunities.</p>
+            <p>Feel free to explore my projects below to see some of the work I've done and the technologies I enjoy
+                working with. Thank you for visiting my personal website!</p>
+        </div>
+    </section>
 
-        <section id="projects" class="projects">
-            <h2>Current Projects</h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>A personal site to showcase my work and skills, built with Python, Flask, and Docker.</p>
-                    <p><strong>Status:</strong> In Progress</p>
-                    <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
-                    <p><strong>Details:</strong> Hand Coded, Deployed with Docker - On Proxmox</p>
-                </div>
-                <div class="project-card">
-                    <h3>Member Manager</h3>
-                    <p>A tool to manage team member data and roles efficiently.</p>
-                    <p><strong>Status:</strong> In Progress</p>
-                    <p><strong>Tech:</strong> Python, SQL</p>
-                    <p><strong>Details:</strong> This project is for KMC to manage member information, roles, and contact details.
-                    It includes features for adding, updating, and deleting member records, as well as searching for members by various criteria.</p>
-                </div>
-                <div class="project-card">
-                    <h3>The Home Lab</h3>
-                    <p>A personal server setup for experimenting with virtualization and networking.</p>
-                    <p><strong>Status:</strong> Ongoing</p>
-                    <p><strong>Tech:</strong> Proxmox, Docker, Linux</p>
-                    <p><strong>Details:</strong> My home lab is a playground for learning and experimenting with various technologies. It even hosts this website!
-                    The setup includes multiple Proxmox servers running multiple virtual machines and containers, allowing me to test different configurations and software.
+    <section id="projects" class="projects">
+        <h2>Current Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A personal site to showcase my work and skills, built with Python, Flask, and Docker.</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+                <p><strong>Details:</strong> Hand Coded, Deployed with Docker - On Proxmox</p>
+            </div>
+            <div class="project-card">
+                <h3>Palletizer IMS</h3>
+                <p>A tool to manage inventory data for daily use regarding palletized products and shipping</p>
+                <p><strong>Status:</strong> In Progress</p>
+                <p><strong>Tech:</strong> HTML, CSS, JavaScript, Flask</p>
+                <p><strong>Details:</strong> Hand Coded, Deployed with Docker - On Proxmox</p>
+            </div>
+            <div class="project-card">
+                <h3>Member Manager</h3>
+                <p>A tool to manage team member data and roles efficiently.</p>
+                <p><strong>Status:</strong> In Progress</p>
+                <p><strong>Tech:</strong> Python, SQL</p>
+                <p><strong>Details:</strong> This project is for KMC to manage member information, roles, and contact
+                    details.
+                    It includes features for adding, updating, and deleting member records, as well as searching for
+                    members by various criteria.</p>
+            </div>
+            <div class="project-card">
+                <h3>The Home Lab</h3>
+                <p>A personal server setup for experimenting with virtualization and networking.</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Tech:</strong> Proxmox, Docker, Linux</p>
+                <p><strong>Details:</strong> My home lab is a playground for learning and experimenting with various
+                    technologies. It even hosts this website!
+                    The setup includes multiple Proxmox servers running multiple virtual machines and containers,
+                    allowing me to test different configurations and software.
                     <!-- This environment is used for development, testing, and learning purposes, allowing me to explore new technologies and improve my skills in a practical setting.
                     I use it to run various services, including web servers, databases, and development environments, all managed through Proxmox for easy deployment and scaling. -->
-                    </p>
-                </div>
-                <div class="project-card">
-                    <h3>KMC IT/AV Coordinator</h3>
-                    <p>Managing IT and AV systems for KMC, ensuring smooth operations and support.</p>
-                    <p><strong>Status:</strong> Ongoing</p>
-                    <p><strong>Tech:</strong> Proxmox, Docker, Linux</p>
-                    <p><strong>Details:</strong> Project involves overseeing the IT infrastructure and audiovisual systems for KMC, 
-                    ensuring everything runs smoothly and efficiently. This includes troubleshooting issues, 
+                </p>
+            </div>
+            <div class="project-card">
+                <h3>KMC IT/AV Coordinator</h3>
+                <p>Managing IT and AV systems for KMC, ensuring smooth operations and support.</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Tech:</strong> Proxmox, Docker, Linux</p>
+                <p><strong>Details:</strong> Project involves overseeing the IT infrastructure and audiovisual systems
+                    for KMC,
+                    ensuring everything runs smoothly and efficiently. This includes troubleshooting issues,
                     managing hardware and software, and providing support to users.</p>
-                </div>
             </div>
+        </div>
 
-            <h2>Past Projects and Work</h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <h3>Label Manager</h3>
-                    <p>An application to streamline label creation and printing for inventory.</p>
-                    <p><strong>Status:</strong> Completed</p>
-                    <p><strong>Tech:</strong> C#, Visual Basic, Python</p>
-                    <p><strong>Details:</strong> ShelfSync is a robust solution designed to simplify shelf labeling for grocery stores and
-                        pharmacies. This project processes various file inputs to automatically generate PDF outputs containing barcodes and
-                        labels, ready for printing. By ensuring accurate and efficient label creation, ShelfSync enhances inventory
-                        management and improves operational workflows, helping retailers maintain organized and customer-friendly shelves
-                        with ease.</p>
-                </div>
-                <div class="project-card">
-                    <h3>RAI OMS</h3>
-                    <p>Complete Operations Management System for mass manufacturing</p>
-                    <p><strong>Status:</strong> Completed</p>
-                    <p><strong>Tech:</strong> Ignition, Python, SQL</p>
-                    <p><strong>Details:</strong> RAI Ignition OMS is a fully functional software solution designed for RAI's large-scale manufacturing operations. Built
-                        with Inductive Automation’s Ignition platform and leveraging Python, Jython, Java, and SQL, this system
-                        streamlines processes and enhances operational efficiency. My team ensured seamless development through regular
-                        client meetings to align with their needs, coupled with consistent demos to foster collaboration, gain
-                        approvals, and strengthen client relationships for long-term success.</p>
-                </div>
-                <div class="project-card">
-                    <h3>FLS Reporting and Analytics</h3>
-                    <p>A reporting tool for analyzing logistics data with visualizations.</p>
-                    <p><strong>Status:</strong> Completed</p>
-                    <p><strong>Tech:</strong> Python, JavaScript, SQL, Power BI, NetSuite</p>
-                    <p><strong>Details:</strong> Features include data cleaning, statistical analysis (e.g., mean, median, standard
-                        deviation), visualization of key metrics (bar charts, line graphs), and exportable PDF reports for stakeholders.
-                        Adapted to scalability by optimizing for large datasets with chunked processing, supported multiple data formats
-                        (CSV, Excel, JSON), and improved report customization based on stakeholder feedback, such as adding dynamic
-                        templates and visualization options.</p>
-                </div>
+        <h2>Past Projects and Work</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Label Manager</h3>
+                <p>An application to streamline label creation and printing for inventory.</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Tech:</strong> C#, Visual Basic, Python</p>
+                <p><strong>Details:</strong> ShelfSync is a robust solution designed to simplify shelf labeling for
+                    grocery stores and
+                    pharmacies. This project processes various file inputs to automatically generate PDF outputs
+                    containing barcodes and
+                    labels, ready for printing. By ensuring accurate and efficient label creation, ShelfSync enhances
+                    inventory
+                    management and improves operational workflows, helping retailers maintain organized and
+                    customer-friendly shelves
+                    with ease.</p>
             </div>
-        </section>
+            <div class="project-card">
+                <h3>RAI OMS</h3>
+                <p>Complete Operations Management System for mass manufacturing</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Tech:</strong> Ignition, Python, SQL</p>
+                <p><strong>Details:</strong> RAI Ignition OMS is a fully functional software solution designed for RAI's
+                    large-scale manufacturing operations. Built
+                    with Inductive Automation’s Ignition platform and leveraging Python, Jython, Java, and SQL, this
+                    system
+                    streamlines processes and enhances operational efficiency. My team ensured seamless development
+                    through regular
+                    client meetings to align with their needs, coupled with consistent demos to foster collaboration,
+                    gain
+                    approvals, and strengthen client relationships for long-term success.</p>
+            </div>
+            <div class="project-card">
+                <h3>FLS Reporting and Analytics</h3>
+                <p>A reporting tool for analyzing logistics data with visualizations.</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Tech:</strong> Python, JavaScript, SQL, Power BI, NetSuite</p>
+                <p><strong>Details:</strong> Features include data cleaning, statistical analysis (e.g., mean, median,
+                    standard
+                    deviation), visualization of key metrics (bar charts, line graphs), and exportable PDF reports for
+                    stakeholders.
+                    Adapted to scalability by optimizing for large datasets with chunked processing, supported multiple
+                    data formats
+                    (CSV, Excel, JSON), and improved report customization based on stakeholder feedback, such as adding
+                    dynamic
+                    templates and visualization options.</p>
+            </div>
+        </div>
+    </section>
 
-    </main>
+</main>
+{% endblock %}
 
-    <footer>
-        <p>&copy; 2025 Jacob Emory Bullin. All rights reserved.</p>
-    </footer>
+{% block footer %}
+    <p>&copy; 2025 Jacob Emory Bullin. All rights reserved.</p>
+{% endblock %}
 
+{% block scripts %}
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
     <script src="{{ url_for('static', filename='js/anime.min.js') }}"></script>
     <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-
-</html>
+{% endblock %}

@@ -1,3 +1,21 @@
+var modal = document.getElementById("clockModal");
+var btn = document.getElementById("clockBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 const $ = (selector) => document.querySelector(selector);
 
 const $hour = $('.hour');
